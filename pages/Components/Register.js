@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import logo from "../images/login.jpg"
+import Link from 'next/link'
 
 const Login = () => {
     return (
@@ -14,29 +14,32 @@ const Login = () => {
             <div className='w-2/3 flex flex-col h-screen py-4 md:w-full'>
 
                 <div className='text-right mr-4'>
-                    <Link href='/register'><button class="btn btn-outline btn-primary">Login / Register</button></Link>
+                    <Link href='/login'><button class="btn btn-outline btn-primary">Login / Register</button></Link>
                     <button class=" ml-4 btn btn-primary">Job Post</button>
                 </div>
 
                 <div className='flex justify-center items-center h-screen'>
                     <div className='flex flex-col align-center justify-center gap-4 '>
 
-                        <h1 className='font-bold text-2xl'>Login to Jobio</h1>
+                        <h1 className='font-bold text-2xl'>Create a Free Jobio Account</h1>
+                        <div className='flex justify-between sm:flex-col sm:gap-4'>
+
+                            <button className="btn sm:w-full w-1/2 text-xs border-none bg-accent btn-success gap-2 mr-2">
+                                <span> Candidate</span>
+                            </button>
+
+                            <button className="btn w-1/2 sm:w-full text-xs border-none gap-2 bg-gray-200 text-green-600 hover:bg-green-50 ">
+                                
+                                <span> Employer</span>
+                            </button>
+                        </div>
 
                         <form className="flex gap-4 flex-col align-center justify-center">
-                            <label htmlFor="username">Username</label>
-                            <input type="text" placeholder="username" className="input input-info input-bordered" />
+                            <label htmlFor="email">Email Address</label>
+                            <input type="text" placeholder="email" className="input input-info input-bordered" />
                             <label htmlFor="Password">Password</label>
                             <input type="password" id="Password" name="Password" placeholder="password" className="input input-info input-bordered" />
-                            <div className="flex justify-between items-center sm:w-full sm:text-xs">
-                                <label className="cursor-pointer label flex gap-2 ">
-                                    <input type="checkbox" className="checkbox sm:checkbox-xs" />
-                                    <span>Remember me</span>
-                                </label>
-                                <p className='font-bold sm:text-right '>Forgot your password?</p>
-                            </div>
-                            <button className="btn btn-block btn-info">LogIn</button>
-                            <p className="flex justify-center">Don't have an account? Signup</p>
+                            <button className="btn btn-block btn-info">Register</button>
                         </form>
 
                         <div className='flex justify-between sm:flex-col sm:gap-4'>
