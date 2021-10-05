@@ -36,7 +36,9 @@ const Login = () => {
                                 <p className='font-bold sm:text-right '>Forgot your password?</p>
                             </div>
                             <button className="btn btn-block btn-info">LogIn</button>
-                            <p className="flex justify-center">Don't have an account? Signup</p>
+                            <Link href='/register'>
+                                <a className="flex justify-center">Don't have an account? Sign up</a>
+                            </Link>
                         </form>
 
                         <div className='flex justify-between sm:flex-col sm:gap-4'>

@@ -1,8 +1,21 @@
 import Image from 'next/image'
 import logo from "../images/login.jpg"
 import Link from 'next/link'
+import { useState } from 'react'
 
 const Login = () => {
+    const [candidate, setCandidate] = useState(false)
+    const [employer, setEmployer] = useState(false)
+
+    const candidateHandler = () => {
+        setCandidate(true)
+        setEmployer(false)
+    }
+
+    const employerHandler = () => {
+        setCandidate(false)
+        setEmployer(true)
+    }
     return (
         <div className="w-full h-screen flex" >
 
@@ -24,12 +37,11 @@ const Login = () => {
                         <h1 className='font-bold text-2xl'>Create a Free Jobio Account</h1>
                         <div className='flex justify-between sm:flex-col sm:gap-4'>
 
-                            <button className="btn sm:w-full w-1/2 text-xs border-none bg-accent btn-success gap-2 mr-2">
+                            <button onClick={candidateHandler} className={candidate ? "btn  sm:w-full w-1/2 text-xs border-none bg-accent btn-success mr-2" : "btn w-1/2 sm:w-full text-xs border-none gap-2 bg-gray-100 text-green-600 hover:bg-green-50"}>
                                 <span> Candidate</span>
                             </button>
 
-                            <button className="btn w-1/2 sm:w-full text-xs border-none gap-2 bg-gray-200 text-green-600 hover:bg-green-50 ">
-                                
+                            <button onClick={employerHandler} className={employer ? "btn sm:w-full w-1/2 text-xs border-none bg-accent btn-success ml-2" : "btn w-1/2 sm:w-full text-xs border-none gap-2 bg-gray-100 text-green-600 hover:bg-green-50"} >
                                 <span> Employer</span>
                             </button>
                         </div>
