@@ -16,21 +16,18 @@ export const Shop = () => {
 
             <div className='flex flex-col flex-wrap justify-center p-8'>
 
-                <div className='flex items-center justify-between pr-12 pl-12'>
+                <div className='flex items-center sm:flex-col sm:gap-4 justify-between pr-12 pl-12'>
                     <div>Showing <strong> {cloths.length}</strong> of  <strong> {cloths.length}</strong> results</div>
 
-                    <div className='flex gap-4'>
-                        <select class=" bg-blue-50 border-none select select-bordered select-accent max-w-xs">
+                    <div className='flex gap-4 '>
+                        <select class="font-normal bg-gray-100 border-none select focus:border-gray-300 max-w-xs ">
                             <option disabled="disabled" selected="selected">Most Recent</option>
-                            <option>telekinesis</option>
-                            <option>time travel</option>
-                            <option>invisibility</option>
+                            <option>Older</option>
                         </select>
-                        <select class=" bg-blue-50 border-none btn-outline select select-bordered select-accent  max-w-xs">
+                        <select class="font-normal bg-gray-100 border-none  select  max-w-xs">
                             <option disabled="disabled" selected="selected">Show 10</option>
-                            <option>telekinesis</option>
-                            <option>time travel</option>
-                            <option>invisibility</option>
+                            <option>20</option>
+                            <option>30</option>
                         </select>
 
                     </div>
