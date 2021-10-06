@@ -1,8 +1,11 @@
-import Image from 'next/image'
+import { useState } from 'react';
 import shirt from '../images/cloth1.png';
+import { cloths } from '../cloths';
+import { ShopItem } from './ShopItem';
 
 export const Shop = () => {
     return (
+
         <div className='h-screen'>
 
             {/* Shop */}
@@ -11,16 +14,35 @@ export const Shop = () => {
                 <div>Home / Shop</div>
             </div>
 
-            <div className='flex flex-row flex-wrap justify-center p-8'>
+            <div className='flex flex-col flex-wrap justify-center p-8'>
 
-                <div className='w-72 h-1/6 flex flex-col border border-gray-200 rounded  p-4 justify-center items-center'>
-                    <figure className=''>
-                        <Image src={shirt} alt="Picture of the author" />
-                    </figure>
+                <div className='flex items-center justify-between pr-12 pl-12'>
+                    <div>Showing <strong> {cloths.length}</strong> of  <strong> {cloths.length}</strong> results</div>
 
-                    <h1 className='font-bold'>Album</h1>
-                    <p className='text-gray-500'>$21.99</p>
+                    <div className='flex gap-4'>
+                        <select class=" bg-blue-50 border-none select select-bordered select-accent max-w-xs">
+                            <option disabled="disabled" selected="selected">Most Recent</option>
+                            <option>telekinesis</option>
+                            <option>time travel</option>
+                            <option>invisibility</option>
+                        </select>
+                        <select class=" bg-blue-50 border-none btn-outline select select-bordered select-accent  max-w-xs">
+                            <option disabled="disabled" selected="selected">Show 10</option>
+                            <option>telekinesis</option>
+                            <option>time travel</option>
+                            <option>invisibility</option>
+                        </select>
 
+                    </div>
+                </div>
+
+                <div className='flex flex-row flex-wrap justify-center p-8'>
+
+                    {cloths.map(cloth => {
+                        return (
+                            <ShopItem image={cloth.image} title={cloth.title} price={cloth.price} />
+                        )
+                    })}
                 </div>
 
             </div>
