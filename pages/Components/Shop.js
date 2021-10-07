@@ -37,7 +37,7 @@ export const Shop = () => {
 
                     {cloths.map(cloth => {
                         return (
-                            <ShopItem image={cloth.image} title={cloth.title} price={cloth.price} />
+                            <ShopItem id={cloth.id} image={cloth.image} title={cloth.title} price={cloth.price} />
                         )
                     })}
                 </div>
