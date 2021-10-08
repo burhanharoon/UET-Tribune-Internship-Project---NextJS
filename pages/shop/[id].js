@@ -28,7 +28,7 @@ const Product = () => {
             </div>
 
             <div className='flex gap-4 p-8 flex-col items-center'>
-                
+
                 <figure className='shadow flex justify-center p-16'>
                     <Image src={cloth.image} layout='intrinsic' width='300px' height='300px' alt="Picture of the Cloth" />
                 </figure>

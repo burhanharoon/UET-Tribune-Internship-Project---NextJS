@@ -12,7 +12,8 @@
     "daisyui": "^1.14.2",
     "next": "^11.1.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
