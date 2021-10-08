@@ -10,3 +10,8 @@ body {
 .displayed {
     display: flex;
 }
+
+.main {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images//person.jpg');
+    background-size: cover;
+}

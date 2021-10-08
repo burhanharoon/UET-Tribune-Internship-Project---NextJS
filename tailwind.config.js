@@ -1,3 +1,4 @@
+// import moduleName from './pages/images/person.jpg';
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -20,7 +21,11 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
 
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'gg': "url('./pages/images/person.jpg)",
+      }
+    },
   },
   variants: {
     extend: {
