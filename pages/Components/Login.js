@@ -14,8 +14,8 @@ const Login = () => {
             <div className='w-2/3 flex flex-col h-screen py-4 md:w-full'>
 
                 <div className='text-right mr-4'>
-                    <Link href='/register'><button class="btn btn-outline btn-primary">Login / Register</button></Link>
-                    <button class=" ml-4 btn btn-primary">Job Post</button>
+                    <Link href='/register'><button className="btn btn-outline btn-primary">Login / Register</button></Link>
+                    <button className=" ml-4 btn btn-primary">Job Post</button>
                 </div>
 
                 <div className='flex justify-center items-center h-screen'>
