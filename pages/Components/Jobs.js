@@ -1,4 +1,3 @@
-
 import { FaBriefcase, FaClock, FaMapMarkedAlt, FaMapMarker, FaMapMarkerAlt, FaMoneyBill } from 'react-icons/fa';
 export const jobs = [
     {
@@ -78,7 +77,6 @@ export const Jobs = () => {
                                     </div>
                                 </div>
                                 <button className="flex sm:hidden btn border-none pr-6 pl-6 hover:bg-red-700 normal-case bg-red-200 text-red-800 hover:text-white">Apply Job</button>
-
                             </div>
                         )
                     })}

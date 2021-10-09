@@ -15,3 +15,8 @@ body {
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images//person.jpg');
     background-size: cover;
 }
+
+.testimonial {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/bg_wall.jpg');
+    background-size: cover;
+}
