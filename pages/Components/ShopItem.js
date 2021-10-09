@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const ShopItem = ({ id, image, title, price }) => {
+const ShopItem = ({ id, image, title, price }) => {
     const [displayButton, setDisplayButton] = useState("notdisplayed");
     const [displayPrice, setDisplayPrice] = useState("displayed");
 
@@ -31,3 +31,5 @@ export const ShopItem = ({ id, image, title, price }) => {
         </div>
     )
 }
+
+export default ShopItem

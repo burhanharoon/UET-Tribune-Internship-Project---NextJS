@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Testimonials = () => {
+const Testimonials = () => {
     return (
         <div className='testimonial  text-white p-14 sm:pl-2 sm:pr-2 flex items-center justify-center'>
             <div className='lg:w-full flex items-center justify-center gap-12 flex-col w-6/12 '>
@@ -21,3 +21,5 @@ export const Testimonials = () => {
         </div>
     )
 }
+
+export default Testimonials

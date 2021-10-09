@@ -2,7 +2,7 @@ import { FaChevronDown } from 'react-icons/fa';
 import Link from 'next/link'
 
 
-export const ShopNavbar = () => {
+const ShopNavbar = () => {
     return (
         <div className="flex justify-between items-start p-4 pr-8 pl-8 text-black font-bold">
             <Link href='/'>
@@ -41,3 +41,5 @@ export const ShopNavbar = () => {
         </div>
     )
 }
+
+export default ShopNavbar

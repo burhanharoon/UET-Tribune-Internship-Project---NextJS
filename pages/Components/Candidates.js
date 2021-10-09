@@ -1,6 +1,6 @@
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { featuredCandidates } from '../api/featuredCandidates';
-export const Candidates = () => {
+const Candidates = () => {
     return (
         <div className="border-b-2 p-12 grid grid-cols-4 lg:grid-cols-2 md:grid-cols-none md:grid-rows-4 gap-8">
             {featuredCandidates.map(candidate =>
@@ -15,3 +15,4 @@ export const Candidates = () => {
         </div>
     )
 }
+export default Candidates

@@ -1,4 +1,4 @@
-export const cloths = [
+const cloths = [
     {
         id: 1,
         image: "https://m.media-amazon.com/images/I/71LQknrzcLS._AC_UX522_.jpg",
@@ -48,3 +48,4 @@ export const cloths = [
         price: 21.99
     }
 ]
+export default cloths

@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import { Jobs } from './Components/Jobs';
-import { Navbar } from './Components/Navbar';
-import { Candidates } from './Components/Candidates';
-import { Testimonials } from './Components/Testimonials';
-import { Stats } from './Components/Stats';
-import { TopJobs } from './Components/TopJobs';
-import { Footer } from './Components/Footer';
+import Jobs from './Components/Jobs';
+import Navbar from './Components/Navbar';
+import Candidates from './Components/Candidates';
+import Testimonials from './Components/Testimonials';
+import Stats from './Components/Stats';
+import TopJobs from './Components/TopJobs';
 
 export default function Home() {
   return (

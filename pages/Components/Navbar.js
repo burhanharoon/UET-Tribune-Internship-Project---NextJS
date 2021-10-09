@@ -4,7 +4,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FaBriefcase } from 'react-icons/fa';
 import Link from 'next/link'
 
-export const Navbar = () => {
+const Navbar = () => {
     return (
         <div className='main text-white h-screen grid p-8 sm:p-4'>
             <div className="flex justify-between items-start">
@@ -84,3 +84,5 @@ export const Navbar = () => {
         </div>
     )
 }
+
+export default Navbar

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaBriefcase, FaMapMarkerAlt } from 'react-icons/fa'
 
-export const TopJobs = () => {
+const TopJobs = () => {
     return (
         <div className='grid grid-cols-2 p-12 lg:grid-cols-none gap-12 border-b-2'>
             <div className='flex justify-center items-center'>
@@ -52,3 +52,4 @@ export const TopJobs = () => {
         </div>
     )
 }
+export default TopJobs

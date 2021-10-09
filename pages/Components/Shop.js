@@ -1,9 +1,7 @@
-import { useState } from 'react';
-import shirt from '../images/cloth1.png';
-import { cloths } from '../cloths';
-import { ShopItem } from './ShopItem';
+import cloths from '../api/cloths';
+import ShopItem from './ShopItem';
 
-export const Shop = () => {
+const Shop = () => {
     return (
         <div>
             <div className='w-full bg-gray-50 flex flex-col gap-1 justify-center items-center shadow-inner h-40'>
@@ -43,3 +41,5 @@ export const Shop = () => {
         </div>
     )
 }
+
+export default Shop

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-export const Footer = () => {
+const Footer = () => {
     return (
         <div className='footer grid grid-cols-5 md:grid-cols-2 sm:grid-cols-none p-24 lg:p-20  md:p-20 md:pl-4 md:pr-4 sm:p-12  text-white'>
             <div className='flex flex-col gap-2 '>
@@ -45,3 +45,5 @@ export const Footer = () => {
         </div>
     )
 }
+
+export default Footer

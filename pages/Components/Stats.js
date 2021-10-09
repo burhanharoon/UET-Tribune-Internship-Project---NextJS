@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Stats = () => {
+const Stats = () => {
     return (
         <div>
             <div className='grid grid-cols-3 p-12 md:grid-cols-none md:gap-8'>
@@ -21,3 +21,5 @@ export const Stats = () => {
         </div>
     )
 }
+
+export default Stats

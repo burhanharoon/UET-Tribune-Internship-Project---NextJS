@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
-import { cloths } from '../cloths'
+import cloths from '../api/cloths'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { FaChevronDown, FaChevronUp, FaShoppingBag } from 'react-icons/fa'
-import { ShopNavbar } from '../Components/ShopNavbar'
+import ShopNavbar from '../Components/ShopNavbar'
 
 const Product = () => {
 

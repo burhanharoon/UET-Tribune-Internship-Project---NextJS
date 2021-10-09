@@ -52,7 +52,7 @@ export const jobs = [
     },
 ]
 
-export const Jobs = () => {
+const Jobs = () => {
     const length = jobs.length
     return (
         <div className=' border-b-2 p-12 grid grid-cols-4 lg:gap-16 lg:grid-cols-none lg:grid-rows-1'>
@@ -105,3 +105,5 @@ export const Jobs = () => {
         </div>
     )
 }
+
+export default Jobs
