@@ -6,23 +6,24 @@ import Link from 'next/link'
 
 export const Navbar = () => {
     return (
-        <div className='main text-white w-full h-screen grid grid-rows-4 p-8 sm:p-4'>
-            <div className="flex justify-between items-center w-full h-10">
-                <p className='text-2xl'>Superio</p>
-                <div className="flex justify-between lg:hidden gap-8">
+        <div className='main text-white h-screen grid p-8 sm:p-4'>
+            <div className="flex justify-between items-start">
+                <h1 className='mb-4 flex gap-2 items-center text-2xl'>
+                    <img src="./logo.jpg" alt="logo" className='w-10 rounded-xl ' />
+                    <p>Superio</p>
+                </h1>
+                <div className="flex justify-between items-center sm:hidden gap-8">
                     <Link href="/"><a className='flex gap-2 items-center'>Home <FaChevronDown /></a></Link>
                     <Link href="/shop"><a className='flex gap-2 items-center'>Shop <FaChevronDown /></a></Link>
-                    <Link href="/"><a className='flex gap-2 items-center'>Employers <FaChevronDown /></a></Link>
-                    <Link href="/"><a className='flex gap-2 items-center'>Candidates <FaChevronDown /></a></Link>
-                    <Link href="/"><a className='flex gap-2 items-center'>Blog <FaChevronDown /></a></Link>
-                    <Link href="/"><a className='flex gap-2 items-center'>Pages <FaChevronDown /></a></Link>
-                    <Link href='/register'><button class="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black'>Login / Register</span></button></Link>
+                    <Link href="/shop/1"><a className='flex gap-2 items-center'>Shop Item <FaChevronDown /></a></Link>
+                    <Link href='/login'><button class="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black'>Login </span></button></Link>
+                    <Link href='/register'><button class="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black'>Register</span></button></Link>
                 </div>
                 {/* For Smaller Screens */}
-                <Link href="/"><a className='hidden lg:flex gap-2 items-center'>Home <FaChevronDown /></a></Link>
+                <Link href="/"><a className='hidden sm:flex gap-2 items-center'>Home <FaChevronDown /></a></Link>
             </div>
 
-            <div className=' row-span-2 flex flex-col items-center gap-12'>
+            <div className='flex flex-col items-center gap-12'>
                 <h1 className="text-3xl text-center font-bold tracking-wider">Your Dream Job is Waiting</h1>
 
                 <div className='bg-white text-gray-600 p-4 rounded-lg flex flex-row sm:flex-col justify-center items-center gap-4'>
