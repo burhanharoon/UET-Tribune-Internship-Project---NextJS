@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import cloths from '../api/cloths'
 import Image from 'next/image'
@@ -17,6 +18,10 @@ const Product = () => {
     return (
 
         <div>
+            <Head>
+                <title>{cloth.title}</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <ShopNavbar />
             <div className='w-full bg-gray-50 flex flex-col gap-1 justify-center shadow-inner items-center h-40'>
                 <div className='font-bold text-2xl'>Shop</div>
