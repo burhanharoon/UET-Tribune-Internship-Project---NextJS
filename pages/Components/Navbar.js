@@ -11,7 +11,7 @@ export const Navbar = () => {
                 <p className='text-2xl'>Superio</p>
                 <div className="flex justify-between lg:hidden gap-8">
                     <Link href="/"><a className='flex gap-2 items-center'>Home <FaChevronDown /></a></Link>
-                    <Link href="/"><a className='flex gap-2 items-center'>Find Jobs <FaChevronDown /></a></Link>
+                    <Link href="/shop"><a className='flex gap-2 items-center'>Shop <FaChevronDown /></a></Link>
                     <Link href="/"><a className='flex gap-2 items-center'>Employers <FaChevronDown /></a></Link>
                     <Link href="/"><a className='flex gap-2 items-center'>Candidates <FaChevronDown /></a></Link>
                     <Link href="/"><a className='flex gap-2 items-center'>Blog <FaChevronDown /></a></Link>
