@@ -5,6 +5,7 @@ import { Candidates } from './Components/Candidates';
 import { Testimonials } from './Components/Testimonials';
 import { Stats } from './Components/Stats';
 import { TopJobs } from './Components/TopJobs';
+import { Footer } from './Components/Footer';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Stats />
       <TopJobs />
       <Candidates />
+      <Footer />
     </div>
   )
 }
