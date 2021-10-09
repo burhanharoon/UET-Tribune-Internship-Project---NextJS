@@ -4,16 +4,31 @@ import logo from "../images/login.jpg"
 
 const Login = () => {
     return (
-        <div className="w-full h-screen flex" >
-
-            <figure className="flex md:hidden">
+        <div className="w-full h-screen flex md:relative sm:p-4" >
+            <Link href='/'>
+                <a>
+                    <h1 className='absolute z-10 mb-4 flex md:hidden gap-2 items-center p-8 text-white sm:text-black text-2xl'>
+                        <img src="./logo.jpg" alt="logo" className='w-10 rounded-xl ' />
+                        <p>Superio</p>
+                    </h1>
+                </a>
+            </Link>
+            <figure className="flex z-0 md:hidden">
                 <Image src={logo} alt="Picture of the author" />
-
             </figure>
 
-            <div className='w-2/3 flex flex-col h-screen py-4 md:w-full'>
+            <div className='w-2/3 flex flex-col md:gap-4 h-screen py-4 md:w-full'>
 
-                <div className='text-right mr-4'>
+                <Link href='/'>
+                    <a>
+                        <h1 className='hidden md:flex gap-2 items-center justify-center text-white md:text-black text-2xl'>
+                            <img src="./logo.jpg" alt="logo" className='w-10 rounded-xl ' />
+                            <p>Superio</p>
+                        </h1>
+                    </a>
+                </Link>
+
+                <div className='flex justify-end md:justify-between mr-8 sm:m-0 mt-4'>
                     <Link href='/register'><button className="btn btn-outline btn-primary">Login / Register</button></Link>
                     <button className=" ml-4 btn btn-primary">Job Post</button>
                 </div>

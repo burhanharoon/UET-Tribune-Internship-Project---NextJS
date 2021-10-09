@@ -17,25 +17,40 @@ const Login = () => {
         setEmployer(true)
     }
     return (
-        <div className="w-full h-screen flex" >
+        <div className="w-full h-screen flex  sm:p-4" >
 
-            <figure className="flex md:hidden">
+            <Link href='/'>
+                <a>
+                    <h1 className='absolute z-10 mb-4 flex md:hidden gap-2 items-center p-8 text-white sm:text-black text-2xl'>
+                        <img src="./logo.jpg" alt="logo" className='w-10 rounded-xl ' />
+                        <p>Superio</p>
+                    </h1>
+                </a>
+            </Link>
+            <figure className="flex z-0 md:hidden">
                 <Image src={logo} alt="Picture of the author" />
-
             </figure>
 
-            <div className='w-2/3 flex flex-col h-screen py-4 md:w-full'>
+            <div className='w-2/3 flex flex-col h-screen py-4 md:gap-4 md:w-full'>
 
-                <div className='text-right mr-4'>
+                <Link href='/'>
+                    <a>
+                        <h1 className='hidden md:flex gap-2 items-center justify-center text-white md:text-black text-2xl'>
+                            <img src="./logo.jpg" alt="logo" className='w-10 rounded-xl ' />
+                            <p>Superio</p>
+                        </h1>
+                    </a>
+                </Link>
+                <div className='flex justify-end md:justify-between mr-8 sm:m-0 mt-4'>
                     <Link href='/login'><button class="btn btn-outline btn-primary">Login / Register</button></Link>
-                    <button class=" ml-4 btn btn-primary">Job Post</button>
+                    <button class="ml-4 btn btn-primary">Job Post</button>
                 </div>
 
                 <div className='flex justify-center items-center h-screen'>
                     <div className='flex flex-col align-center justify-center gap-4 '>
 
                         <h1 className='font-bold text-2xl'>Create a Free Jobio Account</h1>
-                        <div className='flex justify-between sm:flex-col sm:gap-4'>
+                        <div className='flex justify-between sm:flex-col gap-2'>
 
                             <button onClick={candidateHandler} className={candidate ? "btn  sm:w-full w-1/2 text-xs border-none bg-accent btn-success mr-2" : "btn w-1/2 sm:w-full text-xs border-none gap-2 bg-gray-100 text-green-600 hover:bg-green-50"}>
                                 <span> Candidate</span>
