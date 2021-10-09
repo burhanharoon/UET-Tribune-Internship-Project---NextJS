@@ -16,14 +16,14 @@ const Shop = () => {
                 <div>Home / Shop</div>
             </div>
 
-            <div className='flex flex-col flex-wrap justify-center p-8'>
+            <div className='flex flex-col sm:gap-4 sm:mt-4 justify-center p-8 sm:p-0'>
 
 
-                <div class={info ? `alert w-2/4 m-auto` : "hidden"}>
-                    <div class="flex flex-row justify-between items-center w-full" >
+                <div className={info ? `alert w-2/4 sm:w-full  m-auto` : "hidden"}>
+                    <div className="flex flex-row justify-between items-center w-full" >
                         <div className='flex'>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#2196f3" class="w-6 h-6 mx-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#2196f3" className="w-6 h-6 mx-2">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                             <label>Click on the product below to open its respective page!</label>
                         </div>
@@ -35,12 +35,12 @@ const Shop = () => {
                     <div>Showing <strong> {cloths.length}</strong> of  <strong> {cloths.length}</strong> results</div>
 
                     <div className='flex gap-4 '>
-                        <select class="font-normal bg-gray-100 border-none select focus:border-gray-300 max-w-xs ">
-                            <option disabled="disabled" selected="selected">Most Recent</option>
+                        <select defaultValue="Most Recent" className="font-normal bg-gray-100 border-none select focus:border-gray-300 max-w-xs ">
+                            <option >Most Recent</option>
                             <option>Older</option>
                         </select>
-                        <select class="font-normal bg-gray-100 border-none  select  max-w-xs">
-                            <option disabled="disabled" selected="selected">Show 10</option>
+                        <select defaultValue="10" className="font-normal bg-gray-100 border-none  select  max-w-xs">
+                            <option>10</option>
                             <option>20</option>
                             <option>30</option>
                         </select>
@@ -52,7 +52,7 @@ const Shop = () => {
 
                     {cloths.map(cloth => {
                         return (
-                            <ShopItem id={cloth.id} image={cloth.image} title={cloth.title} price={cloth.price} />
+                            <ShopItem key={cloth.id} id={cloth.id} image={cloth.image} title={cloth.title} price={cloth.price} />
                         )
                     })}
                 </div>

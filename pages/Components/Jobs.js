@@ -62,7 +62,7 @@ const Jobs = () => {
                 <div className='shadow border border-gray-100 rounded-xl'>
                     {jobs.map((job, i) => {
                         return (
-                            <div className={i + 1 == length ? `flex hover:border-l-2 hover:pl-3 hover:border-red-500 hover:bg-blue-50 p-4 gap-4 items-center` : 'flex border-b hover:border-b-0 hover:border-l-2 hover:pl-3 hover:border-red-500 hover:bg-blue-50 p-4 gap-4 items-center'}>
+                            <div key={job.id} className={i + 1 == length ? `flex hover:border-l-2 hover:pl-3 hover:border-red-500 hover:bg-blue-50 p-4 gap-4 items-center` : 'flex border-b hover:border-b-0 hover:border-l-2 hover:pl-3 hover:border-red-500 hover:bg-blue-50 p-4 gap-4 items-center'}>
                                 <img src={job.image} alt="logo" className=' w-16' />
                                 <div className='flex flex-col gap-1 lg:gap-2 w-full'>
                                     <h1 className='font-bold'>{job.title}</h1>
@@ -71,7 +71,7 @@ const Jobs = () => {
                                         <p className='flex items-center gap-2'> <FaMapMarkerAlt /> {job.Location}</p>
                                         <p className='flex items-center gap-2'><FaClock /> {job.timePosted} hours ago</p>
                                         <p className='flex items-center gap-2'><FaMoneyBill /> {job.salary}</p>
-                                        <p class="badge text-center badge-info lg:p-0 lg:pr-4 lg:pl-4 xl:p-4"> <span className="text-xs">{job.jobTime}</span></p>
+                                        <p className="badge text-center badge-info lg:p-0 lg:pr-4 lg:pl-4 xl:p-4"> <span className="text-xs">{job.jobTime}</span></p>
                                         <button className=" hidden sm:flex btn border-none pr-6 pl-6 hover:bg-red-700 normal-case bg-red-200 text-red-800 hover:text-white">Apply Job</button>
 
                                     </div>
@@ -88,13 +88,13 @@ const Jobs = () => {
                 <p>Know your worth and find the job that qualify your life</p>
 
                 <div className="p-4 shadow flex flex-col justify-center gap-2 items-center border border-gray-100">
-                    <p class="badge badge-info pr-4 pl-4"> <span className="text-xs">{jobs[0].jobTime}</span></p>
+                    <p className="badge badge-info pr-4 pl-4"> <span className="text-xs">{jobs[0].jobTime}</span></p>
                     <img src={jobs[0].image} alt="logo" className=' rounded-full w-24' />
                     <h1 className="font-bold text-center">Software Engineer (Android) Java Libraries</h1>
                     <p className='flex items-center gap-2'> <FaMapMarkerAlt /> {jobs[0].Location}</p>
                 </div>
                 <div className="p-4 shadow flex flex-col justify-center gap-2 items-center border border-gray-100">
-                    <p class="badge  badge-info pr-4 pl-4"> <span className="text-xs">{jobs[2].jobTime}</span></p>
+                    <p className="badge  badge-info pr-4 pl-4"> <span className="text-xs">{jobs[2].jobTime}</span></p>
                     <img src={jobs[3].image} alt="logo" className=' rounded-full w-24' />
                     <h1 className="font-bold text-center">{jobs[2].title}</h1>
                     <p className='flex items-center gap-2'> <FaMapMarkerAlt /> {jobs[0].Location}</p>

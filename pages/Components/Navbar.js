@@ -20,14 +20,14 @@ const Navbar = () => {
                     <Link href="/"><a className='link link--metis'>Home</a></Link>
                     <Link href="/shop"><a className='link link--metis'>Shop</a></Link>
                     <Link href="/shop/1"><a className='link link--metis '>Shop Item</a></Link>
-                    <Link href='/login'><button class="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black pl-4 pr-4'>Login </span></button></Link>
-                    <Link href='/register'><button class="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black pl-4 pr-4'>Register</span></button></Link>
+                    <Link href='/login'><button className="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black pl-4 pr-4'>Login </span></button></Link>
+                    <Link href='/register'><button className="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black pl-4 pr-4'>Register</span></button></Link>
                 </div>
 
                 {/* For Smaller Screens */}
-                <div class="dropdown dropdown-hover hidden relative sm:flex justify-center items-center">
-                    <Link tabindex="0" href="/"><a className='hidden sm:flex gap-2 pt-2 items-center'>Home <FaChevronDown /></a></Link>
-                    <ul tabindex="0" class="p-2 text-black shadow menu dropdown-content bg-base-100 rounded-box w-52 absolute right-0 top-6">
+                <div className="dropdown dropdown-hover hidden relative sm:flex justify-center items-center">
+                    <Link tabIndex="0" href="/"><a className='hidden sm:flex gap-2 pt-2 items-center'>Home <FaChevronDown /></a></Link>
+                    <ul tabIndex="0" className="p-2 text-black shadow menu dropdown-content bg-base-100 rounded-box w-52 absolute right-0 top-6">
                         <li>
                             <Link href="/shop"><a className='flex gap-2 items-center'>Shop</a></Link>
                         </li>
@@ -48,15 +48,15 @@ const Navbar = () => {
                 <div className='bg-white text-gray-600 p-4 rounded-lg flex flex-row sm:flex-col justify-center items-center gap-4'>
                     <div className='flex items-center gap-2 pr-2 border-r-2 md:border-none'>
                         < FaSearch />
-                        <input type="text" placeholder="Job title, keywords, or company" class="input focus:shadow-none" />
+                        <input type="text" placeholder="Job title, keywords, or company" className="input focus:shadow-none" />
                     </div>
                     <div className='flex lg:hidden items-center gap-2 pr-2 border-r-2'>
                         <FaMapMarkerAlt />
-                        <input type="text" placeholder="City or postcode" class="input focus:shadow-none" />
+                        <input type="text" placeholder="City or postcode" className="input focus:shadow-none" />
                     </div>
                     <div className='flex lg:hidden items-center gap-2 pr-2'>
                         <FaBriefcase />
-                        <input type="text" placeholder="All Categories" class="input focus:shadow-none" />
+                        <input type="text" placeholder="All Categories" className="input focus:shadow-none" />
                     </div>
                     <div>
                         <button className="btn border-none pr-6 pl-6 hover:bg-red-700  bg-red-600">Find Jobs</button>

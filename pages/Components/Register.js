@@ -42,8 +42,8 @@ const Login = () => {
                     </a>
                 </Link>
                 <div className='flex justify-end md:justify-between mr-8 sm:m-0 mt-4'>
-                    <Link href='/login'><button class="btn btn-outline btn-primary">Login / Register</button></Link>
-                    <button class="ml-4 btn btn-primary">Job Post</button>
+                    <Link href='/login'><button className="btn btn-outline btn-primary">Login / Register</button></Link>
+                    <button className="ml-4 btn btn-primary">Job Post</button>
                 </div>
 
                 <div className='flex justify-center items-center h-screen'>
