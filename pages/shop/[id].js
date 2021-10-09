@@ -1,27 +1,18 @@
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import { cloths } from '../cloths'
 import Image from 'next/image'
-import { useState } from 'react'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { useEffect, useState } from 'react'
 import { FaChevronDown, FaChevronUp, FaShoppingBag } from 'react-icons/fa'
-import { ShopNavbar } from '../Components/ShopNavbar';
-import { Navbar } from '../Components/Navbar'
-import { Footer } from '../Components/Footer'
-const cloth = {
-    id: 1,
-    image: "https://m.media-amazon.com/images/I/71LQknrzcLS._AC_UX522_.jpg",
-    title: "Album",
-    price: 21.99
-}
+import { ShopNavbar } from '../Components/ShopNavbar'
+
 const Product = () => {
 
+
     const [counter, setCounter] = useState(0)
-
-    // const router = useRouter()
-    // const { id } = router.query
-
-    // const cloth = cloths.find(cloth => cloth.id == id)
+    const router = useRouter()
+    const { id } = router.query
+    const cloth = cloths.find(cloth => cloth.id == id)
+    console.log(cloth);
 
     return (
 
@@ -35,13 +26,13 @@ const Product = () => {
             <div className='grid grid-cols-2 md:grid-cols-none gap-8 p-12'>
 
                 <figure className='shadow flex justify-center p-16'>
-                    <Image src={cloth.image} layout='intrinsic' width='300px' height='300px' alt="Picture of the Cloth" />
+                    <Image src={cloth?.image} layout='intrinsic' width='300px' height='300px' alt="Picture of the Cloth" />
                 </figure>
 
                 <div className='w-full flex flex-col gap-4'>
-                    <h1 className='font-bold text-4xl'>{cloth.title}</h1>
+                    <h1 className='font-bold text-4xl'>{cloth?.title}</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium blanditiis nam animi, aliquam ipsa architecto exercitationem ipsam voluptatum temporibus odio, cum quasi, quia illo voluptate neque necessitatibus commodi vitae.</p>
-                    <p className='stat-value text-2xl'>${cloth.price}</p>
+                    <p className='stat-value text-2xl'>${cloth?.price}</p>
 
                     {/* Quantity and stock */}
                     <div className='flex items-center gap-12'>

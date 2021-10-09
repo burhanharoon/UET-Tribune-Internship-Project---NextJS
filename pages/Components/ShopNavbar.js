@@ -8,7 +8,7 @@ export const ShopNavbar = () => {
             <Link href='/'>
                 <a>
                     <h1 className='flex gap-2 items-center text-2xl'>
-                        <img src="./logo.jpg" alt="logo" className='w-10 rounded-xl ' />
+                        <img src="/logo.jpg" alt="logo" className='w-10 rounded-xl ' />
                         <p>Superio</p>
                     </h1>
                 </a>
@@ -33,8 +33,8 @@ export const ShopNavbar = () => {
                         <Link href="/shop/1"><a className='flex gap-2 items-center'>Shop Item</a></Link>
                     </li>
                     <li>
-                        <Link href="/shop/1"><a className='flex gap-2 items-center'>Login</a></Link>
-                        <Link href="/shop/1"><a className='flex gap-2 items-center'>Register</a></Link>
+                        <Link href="/login"><a className='flex gap-2 items-center'>Login</a></Link>
+                        <Link href="/register"><a className='flex gap-2 items-center'>Register</a></Link>
                     </li>
                 </ul>
             </div>
