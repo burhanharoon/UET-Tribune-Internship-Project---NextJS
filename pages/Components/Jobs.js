@@ -1,7 +1,6 @@
 
-import { FaBriefcase, FaClock, FaMapMarkedAlt, FaMoneyBill } from 'react-icons/fa';
-import Image from 'next/image'
-const jobs = [
+import { FaBriefcase, FaClock, FaMapMarkedAlt, FaMapMarker, FaMapMarkerAlt, FaMoneyBill } from 'react-icons/fa';
+export const jobs = [
     {
         id: 1,
         image: "data:image/png;base64,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",
@@ -57,30 +56,28 @@ const jobs = [
 export const Jobs = () => {
     const length = jobs.length
     return (
-        <div className='p-12 grid grid-cols-4 lg:gap-16 lg:grid-cols-none lg:grid-rows-2'>
-
+        <div className=' border-b-2 p-12 grid grid-cols-4 lg:gap-16 lg:grid-cols-none lg:grid-rows-1'>
             <div className="col-span-3 lg:col-auto gap-4 grid pr-12 lg:p-0">
                 <h1 className='text-3xl font-extrabold'>Featured Jobs</h1>
                 <p>Know your worth and find the job that qualify your life</p>
                 <div className='shadow border border-gray-100 rounded-xl'>
                     {jobs.map((job, i) => {
                         return (
-
-                            <div className={i + 1 == length ? `flex p-4 gap-4 items-center ` : 'flex border-b p-4 gap-4 items-center'}>
+                            <div className={i + 1 == length ? `flex hover:border-l-2 hover:pl-3 hover:border-red-500 hover:bg-blue-50 p-4 gap-4 items-center` : 'flex border-b hover:border-b-0 hover:border-l-2 hover:pl-3 hover:border-red-500 hover:bg-blue-50 p-4 gap-4 items-center'}>
                                 <img src={job.image} alt="logo" className=' w-16' />
                                 <div className='flex flex-col gap-1 lg:gap-2 w-full'>
                                     <h1 className='font-bold'>{job.title}</h1>
                                     <div className='flex flex-row lg:flex-col gap-4 lg:gap-2 text-gray-500 text-sm'>
                                         <p className='flex items-center gap-2'><FaBriefcase /> {job.software}</p>
-                                        <p className='flex items-center gap-2'><FaMapMarkedAlt /> {job.Location}</p>
+                                        <p className='flex items-center gap-2'> <FaMapMarkerAlt /> {job.Location}</p>
                                         <p className='flex items-center gap-2'><FaClock /> {job.timePosted} hours ago</p>
                                         <p className='flex items-center gap-2'><FaMoneyBill /> {job.salary}</p>
-                                        <p class="badge badge-info pr-4 pl-4"> <span className="text-xs">{job.jobTime}</span></p>
-                                        <button className=" hidden sm:flex btn border-none pr-6 pl-6 hover:bg-red-700 normal-case bg-red-600">Apply Job</button>
+                                        <p class="badge text-center badge-info lg:p-0 lg:pr-4 lg:pl-4 xl:p-4"> <span className="text-xs">{job.jobTime}</span></p>
+                                        <button className=" hidden sm:flex btn border-none pr-6 pl-6 hover:bg-red-700 normal-case bg-red-200 text-red-800 hover:text-white">Apply Job</button>
 
                                     </div>
                                 </div>
-                                <button className="flex sm:hidden btn border-none pr-6 pl-6 hover:bg-red-700 normal-case bg-red-600">Apply Job</button>
+                                <button className="flex sm:hidden btn border-none pr-6 pl-6 hover:bg-red-700 normal-case bg-red-200 text-red-800 hover:text-white">Apply Job</button>
 
                             </div>
                         )
@@ -93,16 +90,16 @@ export const Jobs = () => {
                 <p>Know your worth and find the job that qualify your life</p>
 
                 <div className="p-4 shadow flex flex-col justify-center gap-2 items-center border border-gray-100">
-                    <p class="badge  badge-info pr-4 pl-4"> <span className="text-xs">{jobs[0].jobTime}</span></p>
+                    <p class="badge badge-info pr-4 pl-4"> <span className="text-xs">{jobs[0].jobTime}</span></p>
                     <img src={jobs[0].image} alt="logo" className=' rounded-full w-24' />
                     <h1 className="font-bold text-center">Software Engineer (Android) Java Libraries</h1>
-                    <p className='flex items-center gap-2'><FaMapMarkedAlt /> {jobs[0].Location}</p>
+                    <p className='flex items-center gap-2'> <FaMapMarkerAlt /> {jobs[0].Location}</p>
                 </div>
                 <div className="p-4 shadow flex flex-col justify-center gap-2 items-center border border-gray-100">
                     <p class="badge  badge-info pr-4 pl-4"> <span className="text-xs">{jobs[2].jobTime}</span></p>
                     <img src={jobs[3].image} alt="logo" className=' rounded-full w-24' />
                     <h1 className="font-bold text-center">{jobs[2].title}</h1>
-                    <p className='flex items-center gap-2'><FaMapMarkedAlt /> {jobs[0].Location}</p>
+                    <p className='flex items-center gap-2'> <FaMapMarkerAlt /> {jobs[0].Location}</p>
                 </div>
 
             </div>
