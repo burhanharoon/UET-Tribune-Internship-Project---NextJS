@@ -17,9 +17,9 @@ const Navbar = () => {
                     </a>
                 </Link>
                 <div className="flex justify-between items-center sm:hidden gap-12">
-                    <Link href="/"><a className='flex gap-2 items-center'>Home</a></Link>
-                    <Link href="/shop"><a className='flex gap-2 items-center'>Shop</a></Link>
-                    <Link href="/shop/1"><a className='flex gap-2 items-center'>Shop Item</a></Link>
+                    <Link href="/"><a className='link link--metis'>Home</a></Link>
+                    <Link href="/shop"><a className='link link--metis'>Shop</a></Link>
+                    <Link href="/shop/1"><a className='link link--metis '>Shop Item</a></Link>
                     <Link href='/login'><button class="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black pl-4 pr-4'>Login </span></button></Link>
                     <Link href='/register'><button class="btn border-gray-100 bg-transparent hover:bg-white btn-primary"><span className='text-white hover:text-black pl-4 pr-4'>Register</span></button></Link>
                 </div>

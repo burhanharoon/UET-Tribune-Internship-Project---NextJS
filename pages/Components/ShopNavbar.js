@@ -14,9 +14,9 @@ const ShopNavbar = () => {
                 </a>
             </Link>
             <div className="flex justify-between items-center sm:hidden gap-12">
-                <Link href="/"><a className='flex gap-2 items-center'>Home</a></Link>
-                <Link href="/shop"><a className='flex gap-2 items-center'>Shop</a></Link>
-                <Link href="/shop/1"><a className='flex gap-2 items-center'>Shop Item</a></Link>
+                <Link href="/"><a className='link link--metis'>Home</a></Link>
+                <Link href="/shop"><a className='link link--metis'>Shop</a></Link>
+                <Link href="/shop/1"><a className='link link--metis'>Shop Item</a></Link>
                 <Link href='/login'><button class="btn  border-blue-100 bg-blue-100 hover:bg-white hover:border-blue-100 btn-primary"><span className='text-indigo-500 pl-4 pr-4'>Login </span></button></Link>
                 <Link href='/login'><button class="btn border-blue-100 bg-blue-100 hover:bg-white hover:border-blue-100 btn-primary"><span className='text-indigo-500 pl-4 pr-4'>Register </span></button></Link>
 

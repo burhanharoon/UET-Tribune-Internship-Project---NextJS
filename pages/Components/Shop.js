@@ -1,7 +1,14 @@
+import { faTimes, faUserTimes } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { FaTimes, FaTimesCircle } from 'react-icons/fa';
 import cloths from '../api/cloths';
 import ShopItem from './ShopItem';
 
 const Shop = () => {
+    const [info, setInfo] = useState(true)
+    const handleInfo = () => {
+        setInfo(false)
+    }
     return (
         <div>
             <div className='w-full bg-gray-50 flex flex-col gap-1 justify-center items-center shadow-inner h-40'>
@@ -10,6 +17,19 @@ const Shop = () => {
             </div>
 
             <div className='flex flex-col flex-wrap justify-center p-8'>
+
+
+                <div class={info ? `alert w-2/4 m-auto` : "hidden"}>
+                    <div class="flex flex-row justify-between items-center w-full" >
+                        <div className='flex'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#2196f3" class="w-6 h-6 mx-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <label>Click on the product below to open its respective page!</label>
+                        </div>
+                        <span onClick={handleInfo} className='text-2xl cursor-pointer'>×</span>
+                    </div>
+                </div>
 
                 <div className='flex items-center sm:flex-col sm:gap-4 justify-between pr-12 pl-12'>
                     <div>Showing <strong> {cloths.length}</strong> of  <strong> {cloths.length}</strong> results</div>
