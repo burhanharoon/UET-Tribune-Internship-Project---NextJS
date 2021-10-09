@@ -5,11 +5,8 @@ import { ShopItem } from './ShopItem';
 
 export const Shop = () => {
     return (
-
-        <div className='h-screen'>
-
-            {/* Shop */}
-            <div className='w-full bg-gray-50 flex flex-col gap-1 justify-center items-center h-1/5'>
+        <div>
+            <div className='w-full bg-gray-50 flex flex-col gap-1 justify-center items-center shadow-inner h-40'>
                 <div className='font-bold text-2xl'>Shop</div>
                 <div>Home / Shop</div>
             </div>

@@ -1,12 +1,10 @@
-import { FaBullhorn, FaChevronDown, FaCoins, FaPenNib, FaSearch } from 'react-icons/fa';
-import { FaMapMarkerAlt } from 'react-icons/fa';
-import { FaBriefcase } from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa';
 import Link from 'next/link'
 
 
 export const ShopNavbar = () => {
     return (
-        <div className="flex justify-between items-start p-8 text-black font-bold">
+        <div className="flex justify-between items-start p-4 pr-8 pl-8 text-black font-bold">
             <Link href='/'>
                 <a>
                     <h1 className='flex gap-2 items-center text-2xl'>

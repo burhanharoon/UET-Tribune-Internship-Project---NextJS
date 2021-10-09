@@ -20,7 +20,6 @@ export default function Home() {
       <Stats />
       <TopJobs />
       <Candidates />
-      <Footer />
     </div>
   )
 }

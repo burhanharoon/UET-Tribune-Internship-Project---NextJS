@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const ShopItem = ({ id, image, title, price }) => {
     const [displayButton, setDisplayButton] = useState("notdisplayed");
     const [displayPrice, setDisplayPrice] = useState("displayed");
-    
+
     const showButton = e => {
         e.preventDefault();
         setDisplayPrice('notdisplayed')
@@ -19,7 +19,7 @@ export const ShopItem = ({ id, image, title, price }) => {
     };
 
     return (
-        <div className='shadow-sm w-72 flex flex-col border border-gray-200 rounded p-4 m-2 justify-center items-center' onMouseEnter={e => showButton(e)} onMouseLeave={e => hideButton(e)}>
+        <div key={id} className='shadow-sm w-72 flex flex-col border border-gray-200 rounded p-4 m-2 justify-center items-center' onMouseEnter={e => showButton(e)} onMouseLeave={e => hideButton(e)}>
             <figure>
                 <Link href={`/shop/${id}`}><Image src={image} layout='intrinsic' width='200px' height='200px' alt="Picture of the Cloth" /></Link>
             </figure>
