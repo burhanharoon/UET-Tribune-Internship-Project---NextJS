@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const ShopNavbar = () => {
     return (
-        <div className="flex justify-between items-start p-4 pr-8 pl-8 text-black font-bold">
+        <div className="flex justify-between items-start p-4 pr-8 pl-8 sm:p-4 text-black font-bold">
             <Link href='/'>
                 <a>
                     <h1 className='flex gap-2 items-center text-2xl'>
@@ -18,14 +18,15 @@ const ShopNavbar = () => {
                 <Link href="/shop"><a className='link link--metis'>Shop</a></Link>
                 <Link href="/shop/1"><a className='link link--metis'>Shop Item</a></Link>
                 <Link href='/login'><button className="btn  border-blue-100 bg-blue-100 hover:bg-white hover:border-blue-100 btn-primary"><span className='text-indigo-500 pl-4 pr-4'>Login </span></button></Link>
-                <Link href='/login'><button className="btn border-blue-100 bg-blue-100 hover:bg-white hover:border-blue-100 btn-primary"><span className='text-indigo-500 pl-4 pr-4'>Register </span></button></Link>
+                <Link href='/register'><button className="btn border-blue-100 bg-blue-100 hover:bg-white hover:border-blue-100 btn-primary"><span className='text-indigo-500 pl-4 pr-4'>Register </span></button></Link>
 
             </div>
 
             {/* For Smaller Screens */}
-            <div className="dropdown dropdown-hover hidden relative sm:flex justify-center items-center">
-                <Link tabIndex="0" href="/"><a className='hidden sm:flex gap-2 pt-2 items-center'>Home <FaChevronDown /></a></Link>
-                <ul tabIndex="0" className="p-2 text-black shadow menu dropdown-content bg-base-100 rounded-box w-52 absolute right-0 top-6">
+            <div className="dropdown dropdown-hover hidden relative sm:flex justify-center gap-4 items-center">
+                <Link tabIndex="0" href="/"><a className='flex pt-2 justify-center items-center'>Home</a></Link>
+                <div className='flex gap-2 pt-2 justify-center items-center'><FaChevronDown /></div>
+                <ul tabIndex="0" className="p-2 text-black  shadow menu dropdown-content bg-base-100 rounded-box w-52 absolute right-0 top-8">
                     <li>
                         <Link href="/shop"><a className='flex gap-2 items-center'>Shop</a></Link>
                     </li>

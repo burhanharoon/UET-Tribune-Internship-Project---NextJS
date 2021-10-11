@@ -62,7 +62,7 @@ const Jobs = () => {
                 <div className='shadow border border-gray-100 rounded-xl'>
                     {jobs.map((job, i) => {
                         return (
-                            <div key={job.id} className={i + 1 == length ? `flex hover:border-l-2 hover:pl-3 hover:border-red-500 hover:bg-blue-50 p-4 gap-4 items-center` : 'flex border-b hover:border-b-0 hover:border-l-2 hover:pl-3 hover:border-red-500 hover:bg-blue-50 p-4 gap-4 items-center'}>
+                            <div key={job.id} className={i + 1 == length ? `flex hover:border-l-2 sm:hover:border-l-0 hover:pl-3 sm:hover:pl-4 hover:border-red-500 sm:hover:border-gray-200 hover:bg-blue-50 sm:hover:bg-transparent p-4 gap-4 items-center` : 'flex border-b hover:border-b-0 sm:hover:border-b hover:border-l-2 sm:hover:border-l-0  hover:pl-3 sm:hover:pl-4 hover:border-red-500 sm:hover:border-gray-200 hover:bg-blue-50 sm:hover:bg-transparent p-4 gap-4 items-center'}>
                                 <img src={job.image} alt="logo" className=' w-16' />
                                 <div className='flex flex-col gap-1 lg:gap-2 w-full'>
                                     <h1 className='font-bold'>{job.title}</h1>
