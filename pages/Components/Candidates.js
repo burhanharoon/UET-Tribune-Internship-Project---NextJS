@@ -2,7 +2,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { featuredCandidates } from '../api/featuredCandidates';
 const Candidates = () => {
     return (
-        <div className="border-b-2 p-12 grid grid-cols-4 lg:grid-cols-2 md:grid-cols-none md:grid-rows-4 gap-8">
+        <div className="border-b-2 p-12 sm:p-4 grid grid-cols-4 lg:grid-cols-2 md:grid-cols-none md:grid-rows-4 gap-8">
             {featuredCandidates.map(candidate =>
                 <div key={candidate.id} className="p-4 shadow flex flex-col justify-center gap-4 items-center border border-gray-100">
                     <img src={candidate.image} alt="logo" className=' rounded-full w-24' />

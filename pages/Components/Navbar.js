@@ -7,7 +7,8 @@ import Link from 'next/link'
 const Navbar = () => {
     return (
         <div className='main text-white h-screen grid p-8 sm:p-4'>
-            <div className="flex justify-between items-start">
+
+            <div className="flex justify-between items-start sm:items-center sm:h-2/5">
                 <Link href='/'>
                     <a>
                         <h1 className='flex gap-2 items-center text-2xl'>
@@ -16,6 +17,7 @@ const Navbar = () => {
                         </h1>
                     </a>
                 </Link>
+
                 <div className="flex justify-between items-center sm:hidden gap-12">
                     <Link href="/"><a className='link link--metis'>Home</a></Link>
                     <Link href="/shop"><a className='link link--metis'>Shop</a></Link>
@@ -25,8 +27,10 @@ const Navbar = () => {
                 </div>
 
                 {/* For Smaller Screens */}
-                <div className="dropdown dropdown-hover hidden relative sm:flex justify-center items-center">
-                    <Link tabIndex="0" href="/"><a className='hidden sm:flex gap-2 pt-2 items-center'>Home <FaChevronDown /></a></Link>
+                <div className="dropdown dropdown-hover hidden relative gap-4 sm:flex items-center">
+                    <Link tabIndex="0" href="/"><a>Home</a></Link>
+                    <p> <FaChevronDown /></p>
+
                     <ul tabIndex="0" className="p-2 text-black shadow menu dropdown-content bg-base-100 rounded-box w-52 absolute right-0 top-6">
                         <li>
                             <Link href="/shop"><a className='flex gap-2 items-center'>Shop</a></Link>
@@ -35,8 +39,8 @@ const Navbar = () => {
                             <Link href="/shop/1"><a className='flex gap-2 items-center'>Shop Item</a></Link>
                         </li>
                         <li>
-                            <Link href="/shop/1"><a className='flex gap-2 items-center'>Login</a></Link>
-                            <Link href="/shop/1"><a className='flex gap-2 items-center'>Register</a></Link>
+                            <Link href="/login"><a className='flex gap-2 items-center'>Login</a></Link>
+                            <Link href="/register"><a className='flex gap-2 items-center'>Register</a></Link>
                         </li>
                     </ul>
                 </div>
@@ -81,7 +85,7 @@ const Navbar = () => {
                     <p className="sm:text-xs">(2 open positions)</p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
