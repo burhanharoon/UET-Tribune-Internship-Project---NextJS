@@ -1,51 +1,51 @@
 const cloths = [
     {
         id: 1,
-        image: "https://m.media-amazon.com/images/I/71LQknrzcLS._AC_UX522_.jpg",
+        image: "/cloth-image/cloth_1.jpg",
         title: "Album",
         price: 21.99
     },
     {
         id: 2,
-        image: "https://m.media-amazon.com/images/I/814u83qmwAL._AC_UL320_.jpg",
+        image: "/cloth-image/cloth_2.jpg",
         title: "Beanie",
-        price: 21.99
+        price: 8.99
     },
     {
         id: 3,
-        image: "https://m.media-amazon.com/images/I/612QLPSloyL._AC_UL320_.jpg",
+        image: "/cloth-image/cloth_3.jpg",
         title: "Beanie with Logo",
-        price: 21.99
+        price: 55.99
     },
     {
         id: 4,
-        image: "https://m.media-amazon.com/images/I/81rulNsq5QL._AC_UL320_.jpg",
+        image: "/cloth-image/cloth_4.jpg",
         title: "T-shirt",
         price: 21.99
     },
     {
         id: 5,
-        image: "https://m.media-amazon.com/images/I/71wZ7AwXl9S._AC_UL320_.jpg",
+        image: "/cloth-image/cloth_5.jpg",
         title: "Cap",
-        price: 21.99
+        price: 11.99
     },
     {
         id: 6,
-        image: "https://m.media-amazon.com/images/I/91BYqrXWgQL._AC_UL320_.jpg",
+        image: "/cloth-image/cloth_6.jpg",
         title: "Hoodie",
-        price: 21.99
+        price: 28.99
     },
     {
         id: 7,
-        image: "https://m.media-amazon.com/images/I/512ND0RCs7L._AC_UL320_.jpg",
+        image: "/cloth-image/cloth_7.jpg",
         title: "Hoodie with Zipper",
-        price: 21.99
+        price: 44.99
     },
     {
         id: 8,
-        image: "https://m.media-amazon.com/images/I/71VNtG8Y6vL._AC_UL320_.jpg",
+        image: "/cloth-image/cloth_8.jpg",
         title: "Bag",
-        price: 21.99
+        price: 69.99
     }
 ]
 export default cloths

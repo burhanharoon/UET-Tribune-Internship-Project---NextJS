@@ -19,10 +19,10 @@ const ShopItem = ({ id, image, title, price }) => {
     };
 
     return (
-        <div key={id} className='shadow-sm w-72 flex flex-col border border-gray-200 rounded p-4 m-2 justify-center items-center' onMouseEnter={e => showButton(e)} onMouseLeave={e => hideButton(e)}>
-            <figure>
-                <Link href={`/shop/${id}`}><a><Image src={image} layout='intrinsic' width='200px' height='200px' alt="Picture of the Cloth" /></a></Link>
-            </figure>
+        <div key={id} className='shadow-sm w-72 h-72  flex flex-col border border-gray-200 rounded p-4 m-2 justify-center items-center' onMouseEnter={e => showButton(e)} onMouseLeave={e => hideButton(e)}>
+            <div className='w-full flex items-center justify-center'>
+                <Link href={`/shop/${id}`}><a><img src={image} className='w-48 h-48' alt="Picture of the Cloth" /></a></Link>
+            </div>
             <div className={`${displayPrice} flex flex-col`}>
                 <h1 className=" font-bold text-center">{title}</h1>
                 <p className="text-gray-500 text-center cloth-price">${price}</p>
