@@ -1,13 +1,11 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import cloths from '../api/cloths'
-import Image from 'next/image'
 import { useState } from 'react'
 import { FaChevronDown, FaChevronUp, FaShoppingBag } from 'react-icons/fa'
 import ShopNavbar from '../Components/ShopNavbar'
 
 const Product = () => {
-
 
     const [counter, setCounter] = useState(0)
     const router = useRouter()

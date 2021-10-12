@@ -1,4 +1,4 @@
-import { FaBriefcase, FaClock, FaMapMarkedAlt, FaMapMarker, FaMapMarkerAlt, FaMoneyBill } from 'react-icons/fa';
+import { FaBriefcase, FaClock, FaMapMarkerAlt, FaMoneyBill } from 'react-icons/fa';
 import { jobs } from '../api/jobs';
 
 const Jobs = () => {

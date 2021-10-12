@@ -25,7 +25,7 @@ const cloths = [
     },
     {
         id: 5,
-        image: "https://m.media-amazon.com/images/I/61MMNI8UVvL._AC_UL320_.jpg",
+        image: "https://m.media-amazon.com/images/I/71wZ7AwXl9S._AC_UL320_.jpg",
         title: "Cap",
         price: 21.99
     },
