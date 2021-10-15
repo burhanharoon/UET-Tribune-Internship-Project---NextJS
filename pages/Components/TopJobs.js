@@ -3,7 +3,7 @@ import { FaBriefcase, FaMapMarkerAlt } from 'react-icons/fa'
 
 const TopJobs = () => {
     return (
-        <div className='grid grid-cols-2 p-12 lg:grid-cols-none gap-12 border-b-2'>
+        <div className='grid grid-cols-2 p-12 lg:grid-cols-none gap-12 border-b-2 border-gray-100'>
             <div className='flex justify-center items-center'>
                 <img src="./top_jobs_img.jpg" alt="Girl Working" className='rounded-lg md:w-full' />
             </div>

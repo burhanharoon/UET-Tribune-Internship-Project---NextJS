@@ -10,13 +10,13 @@ const ShopItem = ({ id, image, title, price }) => {
         e.preventDefault();
         setDisplayPrice('notdisplayed')
         setDisplayButton("displayed");
-    };
+    }
 
     const hideButton = e => {
         e.preventDefault();
         setDisplayPrice('displayed')
         setDisplayButton("notdisplayed");
-    };
+    }
 
     return (
         <div key={id} className='shadow-sm w-72 h-72  flex flex-col border border-gray-200 rounded p-4 m-2 justify-center items-center' onMouseEnter={e => showButton(e)} onMouseLeave={e => hideButton(e)}>
