@@ -1,4 +1,3 @@
-
 import { FaBullhorn, FaChevronDown, FaCoins, FaPenNib, FaSearch } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FaBriefcase } from 'react-icons/fa';

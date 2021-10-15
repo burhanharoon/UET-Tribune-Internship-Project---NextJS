@@ -11,7 +11,7 @@ const Candidates = () => {
             </div>
             <div className="grid grid-cols-4 lg:grid-cols-2 md:grid-cols-none gap-8">
                 {featuredCandidates.map(candidate =>
-                    <div key={candidate.id} className="p-4 shadow-sm hover:shadow-md rounded-md flex flex-col justify-center gap-4 items-center border border-gray-100">
+                    <div key={candidate.id} className="p-4 hover:shadow-md rounded-md flex flex-col justify-center gap-4 items-center border border-gray-100">
                         <img src={candidate.image} alt="logo" className=' rounded-full w-24' />
                         <h1 className="font-bold text-xl text-center">{candidate.name}</h1>
                         <h1 className="text-sm font-bold text-center">{candidate.job}</h1>
