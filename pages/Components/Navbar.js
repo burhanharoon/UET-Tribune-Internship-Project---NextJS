@@ -51,7 +51,7 @@ const Navbar = () => {
 
                 <div className='bg-white text-gray-600 p-4 rounded-lg flex flex-row sm:flex-col justify-center items-center gap-4'>
                     <div className='flex items-center gap-2 pr-2 border-r-2 md:border-none'>
-                        < FaSearch />
+                        <FaSearch />
                         <input type="text" placeholder="Job title, keywords, or company" className="input focus:shadow-none" />
                     </div>
                     <div className='flex lg:hidden items-center gap-2 pr-2 border-r-2'>
@@ -63,7 +63,7 @@ const Navbar = () => {
                         <input type="text" placeholder="All Categories" className="input focus:shadow-none" />
                     </div>
                     <div>
-                        <button className="btn border-none pr-6 pl-6 hover:bg-red-700  bg-red-600">Find Jobs</button>
+                        <button className="btn border-none pr-6 pl-6 hover:bg-red-700 capitalize bg-red-600">Find Jobs</button>
                     </div>
                 </div>
             </div>

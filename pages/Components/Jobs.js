@@ -4,7 +4,7 @@ import { jobs } from '../api/jobs';
 const Jobs = () => {
     const length = jobs.length
     return (
-        <div className=' border-b-2 p-12 grid grid-cols-4 lg:gap-16 lg:grid-cols-none lg:grid-rows-1'>
+        <div className='p-12 grid grid-cols-4 lg:gap-16 lg:grid-cols-none lg:grid-rows-1'>
             <div className="col-span-3 lg:col-auto gap-4 grid pr-12 lg:p-0">
                 <h1 className='text-3xl font-extrabold'>Featured Jobs</h1>
                 <p>Know your worth and find the job that qualify your life</p>
