@@ -1,22 +1,29 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import cloths from '../api/cloths'
+import { getAllClothtIds, getClothData } from '../api/cloths'
 import { useState } from 'react'
 import { FaChevronDown, FaChevronUp, FaShoppingBag } from 'react-icons/fa'
 import ShopNavbar from '../Components/ShopNavbar'
 
-const Product = () => {
+export default function Product({ cloth }) {
 
     const [counter, setCounter] = useState(0)
-    const router = useRouter()
-    const { id } = router.query
-    const cloth = cloths.find(cloth => cloth.id == id)
+    const [showDescription, setshowDescription] = useState(true)
+    const [showReviews, setShowReviews] = useState(false)
+    const handleDescription = () => {
+        setshowDescription(true)
+        setShowReviews(false)
+    }
+    const handleReviews = () => {
+        setshowDescription(false)
+        setShowReviews(true)
+    }
+    const date = new Date()
 
     return (
 
         <div>
             <Head>
-                <title>{cloth?.title}</title>
+                <title>{cloth.title}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ShopNavbar />
@@ -28,14 +35,14 @@ const Product = () => {
             <div className='grid grid-cols-2 md:grid-cols-none gap-8 p-12 sm:p-4'>
 
                 <figure className='shadow flex justify-center p-16'>
-                    <img src={cloth?.image} alt="Cloth Picture" width='300px' height='300px' />
+                    <img src={cloth.image} alt="Cloth Picture" width='300px' height='300px' />
 
                 </figure>
 
                 <div className='w-full flex flex-col gap-4'>
-                    <h1 className='font-bold text-4xl'>{cloth?.title}</h1>
+                    <h1 className='font-bold text-4xl'>{cloth.title}</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium blanditiis nam animi, aliquam ipsa architecto exercitationem ipsam voluptatum temporibus odio, cum quasi, quia illo voluptate neque necessitatibus commodi vitae.</p>
-                    <p className='stat-value text-2xl'>${cloth?.price}</p>
+                    <p className='stat-value text-2xl'>${cloth.price}</p>
 
                     {/* Quantity and stock */}
                     <div className='flex items-center gap-12'>
@@ -74,16 +81,18 @@ const Product = () => {
                 </div>
             </div>
 
+            {/* Description and Reviews */}
+
             <div className='flex flex-col items-center p-12'>
                 <div className='flex justify-center items-center mb-8 gap-8'>
-                    <p className='text-indigo-500 text-lg font-bold  border-b-2 border-indigo-300'>
+                    <p onClick={handleDescription} className={showDescription ? 'text-indigo-500 text-lg font-bold  border-b-2 border-indigo-300 cursor-pointer' : 'text-lg font-bold text-center cursor-pointer'}>
                         Description
                     </p>
-                    <p className='text-lg font-bold text-center'>
+                    <p onClick={handleReviews} className={showReviews ? 'text-indigo-500 text-lg font-bold  border-b-2 border-indigo-300 cursor-pointer' : 'text-lg font-bold text-center cursor-pointer'}>
                         Reviews (2)
                     </p>
                 </div>
-                <div className='flex flex-col w-1/2 md:w-full gap-6'>
+                <div className={showDescription ? 'flex flex-col w-1/2 md:w-full gap-6' : 'hidden'}>
                     <h1 className='text-xl font-bold'>Details</h1>
                     <p className='text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta suscipit optio corrupti itaque accusamus ipsam, consequatur, animi, quos sit eveniet! Consequuntur aperiam ipsam necessitatibus molestiae sunt at. In, eos!</p>
                     <h1 className='text-xl font-bold'>Material and care</h1>
@@ -98,9 +107,41 @@ const Product = () => {
                         </ul>
                     </div>
                 </div>
+                <div className={showReviews ? 'flex flex-col w-1/2 md:w-full gap-6' : "hidden"}>
+                    <div className='shadow p-4'>
+                        <div className='flex justify-between items-center'>
+                            <h1 className='font-bold'>Burhan Haroon</h1>
+                            <p className='text-sm'>{date.toDateString()}</p>
+                        </div>
+                        <p>"Gotta say. The product is amazing. Loved buying it. Highly Recomended."</p>
+                    </div>
+                    <div className='shadow p-4'>
+                        <div className='flex justify-between items-center'>
+                            <h1 className='font-bold'>Walter White</h1>
+                            <p className='text-sm'>{date.toDateString()}</p>
+                        </div>
+                        <p>"hehe."</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     )
 }
 
-export default Product
+export async function getStaticPaths() {
+    const paths = getAllClothtIds()
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export async function getStaticProps({ params }) {
+    const cloth = getClothData(params.id)
+    return {
+        props: {
+            cloth
+        }
+    }
+}

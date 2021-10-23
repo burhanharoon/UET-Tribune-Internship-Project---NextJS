@@ -49,3 +49,26 @@ const cloths = [
     }
 ]
 export default cloths
+
+export const getAllClothtIds = () => {
+    const clothsId = cloths.map(cloth => {
+        return {
+            params: {
+                id: cloth.id.toString()
+            }
+        }
+    })
+    return clothsId
+}
+
+
+export const getClothData = (id) => {
+
+    const cloth = cloths.find(cloth => cloth.id == id)
+    return {
+        id,
+        image: cloth.image,
+        title: cloth.title,
+        price: cloth.price
+    }
+}
