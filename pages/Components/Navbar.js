@@ -58,17 +58,17 @@ const Navbar = () => {
                     <div className='flex items-center gap-2 pr-2 border-r-2 md:border-none relative'>
                         <FaSearch />
                         <input type="text" placeholder="Job title, keywords, or company" className="input focus:shadow-none" value={jobTitle} onChange={(e) => { setJobTitle(e.target.value) }} />
-                        {jobTitle && <p className=' absolute text-2xl cursor-pointer right-3' onClick={() => { setJobTitle('') }} >×</p>}
+                        {jobTitle && <p className='absolute cursor-pointer right-3 hover:bg-red-600 w-6 text-lg h-6 flex items-center justify-center rounded-full hover:text-white' onClick={() => { setJobTitle('') }} >×</p>}
                     </div>
                     <div className='flex lg:hidden items-center gap-2 pr-2 border-r-2 relative'>
                         <FaMapMarkerAlt />
                         <input type="text" placeholder="City or postcode" className="input focus:shadow-none" value={cityName} onChange={(e) => { setCityName(e.target.value) }} />
-                        {cityName && <p className=' absolute text-2xl cursor-pointer right-3' onClick={() => { setCityName('') }} >×</p>}
+                        {cityName && <p className='absolute cursor-pointer right-3 hover:bg-red-600 w-6 text-lg h-6 flex items-center justify-center rounded-full hover:text-white' onClick={() => { setCityName('') }} >×</p>}
                     </div>
                     <div className='flex lg:hidden items-center gap-2 pr-2 relative'>
                         <FaBriefcase />
                         <input type="text" placeholder="All Categories" className="input focus:shadow-none" value={category} onChange={(e) => { setCategory(e.target.value) }} />
-                        {category && <p className=' absolute text-2xl cursor-pointer right-2' onClick={() => { setCategory('') }} >×</p>}
+                        {category && <p className='absolute cursor-pointer right-0 hover:bg-red-600 w-6 text-lg h-6 flex items-center justify-center rounded-full hover:text-white' onClick={() => { setCategory('') }} >×</p>}
                     </div>
                     <div>
                         <button type='submit' className="btn border-none pr-6 pl-6 hover:bg-red-700 capitalize bg-red-600">Find Jobs</button>
