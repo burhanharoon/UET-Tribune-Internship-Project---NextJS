@@ -1,9 +1,15 @@
-import { FaBullhorn, FaChevronDown, FaCoins, FaPenNib, FaSearch } from 'react-icons/fa';
+import { FaBullhorn, FaChevronDown, FaCoins, FaCross, FaPenNib, FaSearch } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FaBriefcase } from 'react-icons/fa';
 import Link from 'next/link'
+import { useState } from 'react';
 
 const Navbar = () => {
+
+    const [jobTitle, setJobTitle] = useState('')
+    const [cityName, setCityName] = useState('')
+    const [category, setCategory] = useState('')
+
     return (
         <div className='main text-white h-screen grid p-8 sm:p-4'>
 
@@ -49,20 +55,23 @@ const Navbar = () => {
                 <h1 className="text-3xl text-center font-bold tracking-wider">Your Dream Job is Waiting</h1>
 
                 <div className='bg-white text-gray-600 p-4 rounded-lg flex flex-row sm:flex-col justify-center items-center gap-4'>
-                    <div className='flex items-center gap-2 pr-2 border-r-2 md:border-none'>
+                    <div className='flex items-center gap-2 pr-2 border-r-2 md:border-none relative'>
                         <FaSearch />
-                        <input type="text" placeholder="Job title, keywords, or company" className="input focus:shadow-none" />
+                        <input type="text" placeholder="Job title, keywords, or company" className="input focus:shadow-none" value={jobTitle} onChange={(e) => { setJobTitle(e.target.value) }} />
+                        {jobTitle && <p className=' absolute text-2xl cursor-pointer right-3' onClick={() => { setJobTitle('') }} >×</p>}
                     </div>
-                    <div className='flex lg:hidden items-center gap-2 pr-2 border-r-2'>
+                    <div className='flex lg:hidden items-center gap-2 pr-2 border-r-2 relative'>
                         <FaMapMarkerAlt />
-                        <input type="text" placeholder="City or postcode" className="input focus:shadow-none" />
+                        <input type="text" placeholder="City or postcode" className="input focus:shadow-none" value={cityName} onChange={(e) => { setCityName(e.target.value) }} />
+                        {cityName && <p className=' absolute text-2xl cursor-pointer right-3' onClick={() => { setCityName('') }} >×</p>}
                     </div>
-                    <div className='flex lg:hidden items-center gap-2 pr-2'>
+                    <div className='flex lg:hidden items-center gap-2 pr-2 relative'>
                         <FaBriefcase />
-                        <input type="text" placeholder="All Categories" className="input focus:shadow-none" />
+                        <input type="text" placeholder="All Categories" className="input focus:shadow-none" value={category} onChange={(e) => { setCategory(e.target.value) }} />
+                        {category && <p className=' absolute text-2xl cursor-pointer right-2' onClick={() => { setCategory('') }} >×</p>}
                     </div>
                     <div>
-                        <button className="btn border-none pr-6 pl-6 hover:bg-red-700 capitalize bg-red-600">Find Jobs</button>
+                        <button type='submit' className="btn border-none pr-6 pl-6 hover:bg-red-700 capitalize bg-red-600">Find Jobs</button>
                     </div>
                 </div>
             </div>
