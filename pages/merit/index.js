@@ -72,7 +72,7 @@ const Merit = () => {
                             <div>
                                 <label className="label"><span className="label-text">10th Marks:</span></label>
                                 <div className='flex items-center relative'>
-                                    <input type="text" pattern="[^\s]+" className="input input-lg text-lg input-bordered" value={matricMarks ? matricMarks : ''} onChange={(e) => { handleMatricMarks(e, 1, 1100) }} />
+                                    <input type="text" inputmode="numeric" className="input input-lg text-lg input-bordered" value={matricMarks ? matricMarks : ''} onChange={(e) => { handleMatricMarks(e, 1, 1100) }} />
                                     <p className='absolute right-4 text-lg font-light'>/ 1100</p>
                                 </div>
                             </div>
