@@ -3,52 +3,59 @@ import Error from "../Components/Error"
 
 const Merit = () => {
     const [matricMarks, setMatricMarks] = useState(0)
+    const [firstYearMarks, setFirstYearMarks] = useState(0)
+    const [ecatMarks, setEcatMarks] = useState(0)
     const [showError, setShowError] = useState(false)
     const [errorValue, setErrorValue] = useState(0)
 
-    const handleShowError = () => {
 
-    }
-    // [0-9]+[0-9][0-9]+[0-9][0-9][0-9]+[1][0-9][0-9][0-9]/  const regex = new RegExp([0 - 9] + [0 - 9][0 - 9] + [0 - 9][0 - 9][0 - 9] + [1][0 - 9][0 - 9][0 - 9])
-    const handleMatricMarks = (e) => {
-        // matricMarks <= 1100 ? setMatricMarks(e.target.value) : setTimeout(() => {
-        //     setErrorValue(1100)
-        //     setShowError(true)
-        // }, 100); setShowError(false);
-        console.log(/^([a-z0-9]{5,})$/.test(e.target.value))
-        // if (/^([a-z0-9]{5,})$/.test(e.target.value)) {
-        //     setMatricMarks(e.target.value)
-        // }
+    const handleMatricMarks = (e, section, totalMarks) => {
+
+        if (e.which === 32) { return false }
+        else if (e.target.value <= totalMarks) {
+            section == 1 ? setMatricMarks(e.target.value.trim()) : section == 2 ? setFirstYearMarks(e.target.value.trim()) : setEcatMarks(e.target.value.trim())
+        } else {
+            setErrorValue(totalMarks)
+            setShowError(true)
+            setTimeout(() => {
+                setShowError(false)
+            }, 1000);
+        }
     }
     return (
-        <div className='h-screen relative p-12 flex justify-between items-center flex-wrap sm:flex-col'>
+        <div className='h-screen p-12 flex-col justify-between items-center flex-wrap'>
             {showError && <Error value={errorValue} />}
-            <div>
-                <label class="label"><span class="label-text">10th Marks:</span></label>
-                <div className='flex items-center relative'>
-                    <input type="text" class="input h-16 w-60 text-lg pr-20 input-bordered" value={matricMarks ? matricMarks : ''} onChange={(e) => { handleMatricMarks(e) }} />
-                    <p className='absolute right-4 text-lg font-light'>/ 1100</p>
+
+            <div className=' h-4/5 p-12 flex justify-between items-center flex-wrap sm:flex-col'>
+                <div>
+                    <label className="label"><span className="label-text">10th Marks:</span></label>
+                    <div className='flex items-center relative'>
+                        <input type="text" pattern="[^\s]+" className="input input-lg text-lg input-bordered" value={matricMarks ? matricMarks : ''} onChange={(e) => { handleMatricMarks(e, 1, 1100) }} />
+                        <p className='absolute right-4 text-lg font-light'>/ 1100</p>
+                    </div>
+                </div>
+                <div>
+                    <label className="label">
+                        <span className="label-text">1st Year Marks:</span>
+                    </label>
+                    <div className='flex items-center relative'>
+                        <input type="text" className="input input-lg text-lg input-bordered" value={firstYearMarks ? firstYearMarks : ''} onChange={(e) => { handleMatricMarks(e, 2, 520) }} />
+                        <p className='absolute right-4 text-lg font-light'>/ 520</p>
+                    </div>
+                </div>
+                <div>
+                    <label className="label">
+                        <span className="label-text">Entry Test Marks:</span>
+                    </label>
+                    <div className='flex items-center relative'>
+                        <input type="text" className="input input-lg text-lg input-bordered" value={ecatMarks ? ecatMarks : ''} onChange={(e) => { handleMatricMarks(e, 3, 400) }} />
+                        <p className='absolute right-4 text-lg font-light'>/ 400</p>
+                    </div>
                 </div>
             </div>
-            <div>
-                <label class="label">
-                    <span class="label-text">1st Year Marks:</span>
-                </label>
-                <div className='flex items-center relative'>
-                    <input type="text" class="input h-16 w-60 text-lg pr-20 input-bordered" />
-                    <p className='absolute right-4 text-lg font-light'>/ 520</p>
-                </div>
-            </div>
-            <div>
-                <label class="label">
-                    <span class="label-text">Entry Test Marks:</span>
-                </label>
-                <div className='flex items-center relative'>
-                    <input type="text" class="input h-16 w-60 text-lg pr-20 input-bordered" />
-                    <p className='absolute right-4 text-lg font-light'>/ 400</p>
-                </div>
-            </div>
-        </div >
+
+
+        </div>
     )
 }
 
